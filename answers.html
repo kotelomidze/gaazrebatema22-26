@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="ka">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>სწორი პასუხების გასაღები</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --indigo:#4f46e5; --indigo-dark:#4338ca; --slate:#0f172a; --muted:#64748b; --line:#e2e8f0; --emerald:#059669; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:#f1f5f9; color:var(--slate); font-family:'Noto Sans Georgian',system-ui,sans-serif; font-size:15px; }
+  .wrap { max-width:900px; margin:0 auto; padding:0 16px 80px; }
+  header { background:linear-gradient(90deg,#312e81,#1e1b4b,#0f172a); color:#fff; padding:22px 0; margin-bottom:24px; }
+  header .wrap { padding-bottom:0; }
+  header h1 { font-size:20px; font-weight:800; margin:0; }
+  header p { color:#c7d2fe; font-size:13px; margin:4px 0 0; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:20px; padding:20px; margin-bottom:16px; box-shadow:0 1px 2px rgba(15,23,42,.04); }
+  label { display:block; font-size:12px; font-weight:600; color:#334155; margin-bottom:6px; }
+  select, input { width:100%; padding:10px 12px; border:1px solid var(--line); border-radius:12px; font:inherit; font-size:14px; background:#f8fafc; }
+  select:focus, input:focus { outline:none; border-color:var(--indigo); box-shadow:0 0 0 3px rgba(79,70,229,.15); }
+  .row { display:flex; gap:12px; flex-wrap:wrap; align-items:flex-end; }
+  .row > div { flex:1 1 220px; }
+  button { font:inherit; cursor:pointer; border-radius:12px; border:1px solid transparent; padding:10px 16px; font-weight:700; font-size:14px; }
+  .primary { background:var(--indigo); color:#fff; }
+  .primary:hover { background:var(--indigo-dark); }
+  .ghost { background:#fff; border-color:var(--line); color:#334155; }
+  .q { padding:16px 0; border-bottom:1px solid #f1f5f9; display:flex; gap:14px; }
+  .q:last-child { border-bottom:0; }
+  .q.missing { background:#fef2f2; margin:0 -20px; padding-left:20px; padding-right:20px; }
+  .n { font-weight:800; color:var(--indigo); min-width:26px; }
+  .qt { font-weight:600; margin-bottom:10px; line-height:1.5; }
+  .opts { display:flex; flex-direction:column; gap:6px; }
+  .opt { display:flex; gap:10px; align-items:center; text-align:right; background:#fff; border:1px solid var(--line); border-radius:12px; padding:8px 12px; width:100%; font-weight:400; }
+  .opt:hover { border-color:#a5b4fc; }
+  .opt[aria-pressed=true] { background:#ecfdf5; border-color:#6ee7b7; }
+  .opt .k { font-weight:800; color:#475569; min-width:16px; }
+  .opt[aria-pressed=true] .k { color:var(--emerald); }
+  .status { font-size:13px; color:var(--muted); margin:0 0 12px; }
+  .msg { color:var(--emerald); font-size:13px; font-weight:600; }
+  code { background:#f1f5f9; padding:2px 6px; border-radius:6px; font-size:13px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <h1>სწორი პასუხების გასაღები</h1>
+    <p>მასწავლებლის ხელსაწყო — მოსწავლეები ამ გვერდს ვერ ხედავენ</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="card">
+    <div class="row">
+      <div style="flex:2 1 320px">
+        <label for="sel">ტესტი</label>
+        <select id="sel"><option>იტვირთება…</option></select>
+      </div>
+      <div>
+        <label for="bulk">სწრაფი შევსება</label>
+        <input id="bulk" placeholder="გ ა ა ბ ა ა გ გ გ დ">
+      </div>
+      <div style="flex:0 0 auto">
+        <button class="ghost" id="apply">შევსება</button>
+      </div>
+    </div>
+    <p class="status" style="margin-top:12px">ათი ასო თანმიმდევრობით — კითხვები 2-დან 11-მდე.</p>
+  </div>
+
+  <p class="status" id="status"></p>
+  <div class="card" id="rows"></div>
+
+  <div class="row" style="margin-top:16px">
+    <div style="flex:0 0 auto"><button class="primary" id="dl">JSON-ის ჩამოტვირთვა</button></div>
+    <div style="flex:0 0 auto"><button class="ghost" id="copy">გასაღების კოპირება</button></div>
+    <div><span class="msg" id="msg"></span></div>
+  </div>
+  <p class="status">ჩამოტვირთული ფაილი ატვირთე GitHub-ზე იმავე სახელით — ძველს ჩაანაცვლებს.</p>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  var index = [], test = null;
+  var $ = function (id) { return document.getElementById(id); };
+
+  fetch('tests.json', { cache: 'no-store' })
+    .then(function (r) { return r.json(); })
+    .then(function (d) {
+      index = d.tests || [];
+      var sel = $('sel');
+      sel.innerHTML = '';
+      index.forEach(function (t, i) {
+        var o = document.createElement('option');
+        o.value = i;
+        o.textContent = t.title + ': ' + (t.author || '') + ' – „' + (t.work || t.id) + '“' + (t.keyComplete ? '  ✓' : '  (გასაღები აკლია)');
+        sel.appendChild(o);
+      });
+      if (index.length) load(0);
+    })
+    .catch(function () { $('status').textContent = 'tests.json ვერ ჩაიტვირთა.'; });
+
+  $('sel').addEventListener('change', function () { load(+this.value); });
+
+  function load(i) {
+    var e = index[i];
+    fetch(e.file || ('test-' + e.id + '.json'), { cache: 'no-store' })
+      .then(function (r) { return r.json(); })
+      .then(function (t) { test = t; render(); });
+  }
+
+  function render() {
+    var box = $('rows');
+    box.innerHTML = '';
+    test.questions.forEach(function (q) {
+      var row = document.createElement('div');
+      row.className = 'q' + (q.correctAnswer ? '' : ' missing');
+
+      var n = document.createElement('div');
+      n.className = 'n';
+      n.textContent = q.number + '.';
+
+      var body = document.createElement('div');
+      body.style.flex = '1';
+      var qt = document.createElement('div');
+      qt.className = 'qt';
+      qt.textContent = q.text;
+      body.appendChild(qt);
+
+      var opts = document.createElement('div');
+      opts.className = 'opts';
+      q.options.forEach(function (o) {
+        var b = document.createElement('button');
+        b.className = 'opt';
+        b.type = 'button';
+        b.setAttribute('aria-pressed', String(q.correctAnswer === o.key));
+        var k = document.createElement('span');
+        k.className = 'k';
+        k.textContent = o.key + ')';
+        var t = document.createElement('span');
+        t.textContent = o.text;
+        b.appendChild(k); b.appendChild(t);
+        b.addEventListener('click', function () {
+          q.correctAnswer = q.correctAnswer === o.key ? '' : o.key;
+          render();
+        });
+        opts.appendChild(b);
+      });
+      body.appendChild(opts);
+      row.appendChild(n); row.appendChild(body);
+      box.appendChild(row);
+    });
+    var filled = test.questions.filter(function (q) { return q.correctAnswer; }).length;
+    $('status').textContent = 'შევსებულია ' + filled + ' / ' + test.questions.length + ' — ' + (test.author || '') + ' „' + (test.work || test.title) + '“';
+  }
+
+  $('apply').addEventListener('click', function () {
+    if (!test) return;
+    var letters = $('bulk').value.match(/[ა-დ]/g) || [];
+    test.questions.forEach(function (q, i) { if (letters[i]) q.correctAnswer = letters[i]; });
+    render();
+  });
+
+  $('dl').addEventListener('click', function () {
+    if (!test) return;
+    var blob = new Blob([JSON.stringify(test, null, 2)], { type: 'application/json' });
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'test-' + test.id + '.json';
+    a.click();
+    URL.revokeObjectURL(a.href);
+    $('msg').textContent = 'ჩამოიტვირთა — ატვირთე GitHub-ზე test-' + test.id + '.json';
+  });
+
+  $('copy').addEventListener('click', function () {
+    if (!test) return;
+    var line = test.questions.map(function (q) { return q.number + '-' + (q.correctAnswer || '?'); }).join(', ');
+    navigator.clipboard.writeText(line).then(function () { $('msg').textContent = 'დაკოპირდა: ' + line; });
+  });
+})();
+</script>
+</body>
+</html>
