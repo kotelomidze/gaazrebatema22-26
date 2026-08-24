@@ -12,6 +12,30 @@
       "hasEssay": true,
       "keyComplete": true
     },
+      {
+       "id": "vepkhistqaosniiiiiii",
+       "file": "test-vepkhistqaosniiiiiii.json",
+       "title": "ტექსტი I",
+       "author": "შოთა რუსთაველი",
+       "work": "ვეფხისტყაოსანი",
+       "order": 999,
+       "source": "მონაკვეთი შოთა რუსთაველის „ვეფხისტყაოსნიდან“ (ტარიელისა და ავთანდილის მეორე შეხვედრა)",
+       "questionCount": 10,
+       "hasEssay": true,
+       "keyComplete": true
+     },
+     {
+       "id": "grigol-khandztelis-tskhovreba",
+       "file": "test-grigol-khandztelis-tskhovreba.json",
+       "title": "ტექსტი II",
+       "author": "გიორგი მერჩულე",
+       "work": "გრიგოლ ხანძთელის ცხოვრება",
+       "order": 999,
+       "source": "მონაკვეთი გიორგი მერჩულის თხზულებიდან „გრიგოლ ხანძთელის ცხოვრება“",
+       "questionCount": 10,
+       "hasEssay": true,
+       "keyComplete": true
+      },
     {
       "id": "ade-chamovida-psikologiuri-etiudi",
       "file": "test-ade-chamovida-psikologiuri-etiudi.json",
