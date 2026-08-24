@@ -156,7 +156,7 @@
           "text": "შიშს."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ა"
     },
     {
       "id": 3,
@@ -181,7 +181,7 @@
           "text": "ხალხში გაურკვევლობა მძაფრად იგრძნობოდა."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ბ"
     },
     {
       "id": 4,
@@ -206,7 +206,7 @@
           "text": "სიძლიერის."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "დ"
     },
     {
       "id": 5,
@@ -231,7 +231,7 @@
           "text": "„მთელი სვანეთი შეკრებილა... / შხარასთან ღრუბელივით მომდგარა“."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "დ"
     },
     {
       "id": 6,
@@ -256,7 +256,7 @@
           "text": "გურამს მთელი ცხოვრების სვანეთში გატარება უნდოდა."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ა"
     },
     {
       "id": 7,
@@ -281,7 +281,7 @@
           "text": "წინდახედულობა გამოუჩენია."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ბ"
     },
     {
       "id": 8,
@@ -306,7 +306,7 @@
           "text": "ტკივილი, რომ გურამი ასე ტრაგიკულად დაიღუპა."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "დ"
     },
     {
       "id": 9,
@@ -331,7 +331,7 @@
           "text": "სიმტკიცეს."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "გ"
     },
     {
       "id": 10,
@@ -356,7 +356,7 @@
           "text": "„ცოცხლისგან საყვედური აუგია“."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ბ"
     },
     {
       "id": 11,
@@ -381,7 +381,7 @@
           "text": "„შენ გაიელვე ღრუბლებზე მაღლა, / შენ საქართველოს ღამე გახაზე“."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "დ"
     }
   ],
   "essay": {

@@ -73,7 +73,7 @@
           "text": "ხელისუფლების შეშფოთების საგანი გახდა."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ა"
     },
     {
       "id": 3,
@@ -98,7 +98,7 @@
           "text": "ჭადრაკით იყო მთლიანად შეპყრობილი."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "დ"
     },
     {
       "id": 4,
@@ -123,7 +123,7 @@
           "text": "შედარება."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ბ"
     },
     {
       "id": 5,
@@ -148,7 +148,7 @@
           "text": "გაამაყებულია."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "გ"
     },
     {
       "id": 6,
@@ -173,7 +173,7 @@
           "text": "შორსმჭვრეტელია."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "გ"
     },
     {
       "id": 7,
@@ -198,7 +198,7 @@
           "text": "შეეშინდა ლამაზ ქალიშვილს უბედურება არ შემთხვეოდა."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ბ"
     },
     {
       "id": 8,
@@ -223,7 +223,7 @@
           "text": "ჰიპერბოლა."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ა"
     },
     {
       "id": 9,
@@ -248,7 +248,7 @@
           "text": "მოულოდნელად უკან დაიხია."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "გ"
     },
     {
       "id": 10,
@@ -273,7 +273,7 @@
           "text": "მიხვდა, რომ საფრთხეს ვერ გაექცეოდა."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "გ"
     },
     {
       "id": 11,
@@ -298,7 +298,7 @@
           "text": "ფრთხილი."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ა"
     }
   ],
   "essay": {

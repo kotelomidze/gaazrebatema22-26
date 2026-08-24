@@ -2,7 +2,7 @@
   "id": "leksi-vepkhvisa-da-moqmisa",
   "order": 999,
   "title": "ტექსტი I",
-  "author": "წაიკითხეთ ხალხური",
+  "author": "ხალხური",
   "work": "ლექსი ვეფხვისა და მოყმისა",
   "source": "ხალხური „ლექსი ვეფხვისა და მოყმისა“",
   "sourceFile": "გააზრება, 242 (ხალხური, პოემა ვეფხვისა).pdf",
@@ -202,7 +202,7 @@
           "text": "მოყმის ხმალს ბასრი პირი აქვს."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "გ"
     },
     {
       "id": 3,
@@ -227,7 +227,7 @@
           "text": "საკუთარი იარაღის ბრძოლაში გამოცდა უნდოდა."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ა"
     },
     {
       "id": 4,
@@ -252,7 +252,7 @@
           "text": "ჰიპერბოლა."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "დ"
     },
     {
       "id": 5,
@@ -277,7 +277,7 @@
           "text": "ვეფხვი მოყმის ყურადღების გაფანტვას შეეცადა."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ბ"
     },
     {
       "id": 6,
@@ -302,7 +302,7 @@
           "text": "მისმა შვილმა ვერ გამოიჩინა წინდახედულობა."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "დ"
     },
     {
       "id": 7,
@@ -327,7 +327,7 @@
           "text": "სიცოცხლის დათმობა ორივეს გაუჭირდა."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "გ"
     },
     {
       "id": 8,
@@ -352,7 +352,7 @@
           "text": "ხმალი საჭირო დროს არ გამოგადგა."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ა"
     },
     {
       "id": 9,
@@ -377,7 +377,7 @@
           "text": "„ხანნი რომ ჰქონდეს ცდისანი“."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ა"
     },
     {
       "id": 10,
@@ -402,7 +402,7 @@
           "text": "რადგან საოცარი ვაჟკაცობა გამოიჩინა."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "დ"
     },
     {
       "id": 11,
@@ -427,7 +427,7 @@
           "text": "ქედმაღლობა."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ბ"
     }
   ],
   "essay": {

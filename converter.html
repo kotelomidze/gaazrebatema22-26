@@ -633,8 +633,26 @@ async function handle(files) {
     $('progress').textContent = `მუშავდება ${i + 1} / ${files.length} — ${files[i].name}`;
     try {
       const test = await window.ExamParser.parsePdfFile(files[i], pdfjsLib);
-      const dup = tests.findIndex(t => t.id === test.id);
-      if (dup >= 0) tests[dup] = test; else tests.push(test);
+
+      // იმავე PDF-ის ხელახლა ჩაგდება ანახლებს ჩანაწერს;
+      // სხვა PDF იმავე სათაურით ცალკე ფაილად ინახება (ამაყი, amaqi-2 ...)
+      const same = tests.findIndex(t => t.sourceFile === test.sourceFile);
+      if (same >= 0) {
+        test.id = tests[same].id;
+        tests[same] = test;
+      } else {
+        const taken = new Set([
+          ...tests.map(t => t.id),
+          ...((existingIndex || []).map(e => e.id)),
+        ]);
+        if (taken.has(test.id)) {
+          let n = 2;
+          while (taken.has(test.id + '-' + n)) n++;
+          test.id = test.id + '-' + n;
+          test.warnings = (test.warnings || []).concat('ამავე სახელწოდების ტესტი უკვე არსებობს — შეინახება როგორც ' + test.id);
+        }
+        tests.push(test);
+      }
     } catch (err) {
       tests.push({ id: 'error-' + i, failed: true, sourceFile: files[i].name, warnings: [String(err.message || err)], questions: [], sections: [] });
     }

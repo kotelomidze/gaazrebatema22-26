@@ -97,7 +97,7 @@
           "text": "რომ წუთისოფელი წარმავალია."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ა"
     },
     {
       "id": 3,
@@ -122,7 +122,7 @@
           "text": "ხშირად გამოყენებულსა და ბანალურს."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "დ"
     },
     {
       "id": 4,
@@ -147,7 +147,7 @@
           "text": "ჯადოსნური სამყაროს შექმნა."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ა"
     },
     {
       "id": 5,
@@ -172,7 +172,7 @@
           "text": "შეძრწუნებას."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "დ"
     },
     {
       "id": 6,
@@ -197,7 +197,7 @@
           "text": "ჰიპერბოლა."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ბ"
     },
     {
       "id": 7,
@@ -222,7 +222,7 @@
           "text": "ცოდვილ ადამიანს, რომელიც მონანიებას ცდილობს."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "გ"
     },
     {
       "id": 8,
@@ -247,7 +247,7 @@
           "text": "შედარება."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "დ"
     },
     {
       "id": 9,
@@ -272,7 +272,7 @@
           "text": "მტერს გადარჩენის ყოველგვარი საშუალება უნდა მოუსპო."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ა"
     },
     {
       "id": 10,
@@ -297,7 +297,7 @@
           "text": "ცხოვრების სიტლანქე ადამიანებს ერთმანეთისაგან თიშავს."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ბ"
     },
     {
       "id": 11,
@@ -322,7 +322,7 @@
           "text": "მკითხველს ჩააფიქრებს ცხოვრების უკუღმართობაზე."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ბ"
     }
   ],
   "essay": {

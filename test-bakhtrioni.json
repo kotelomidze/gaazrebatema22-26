@@ -2,7 +2,7 @@
   "id": "bakhtrioni",
   "order": 999,
   "title": "ტექსტი I",
-  "author": "მონაკვეთი ვაჟა-ფშაველას",
+  "author": "ვაჟა-ფშაველა",
   "work": "ბახტრიონი",
   "source": "მონაკვეთი ვაჟა-ფშაველას პოემიდან „ბახტრიონი“",
   "sourceFile": "გააზრება, 233 (ვაჟა, ბახტრიონი).pdf",
@@ -165,7 +165,7 @@
           "text": "უშფოთველობას."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ა"
     },
     {
       "id": 3,
@@ -190,7 +190,7 @@
           "text": "ღალატი არ ჩაიდინოსო."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "დ"
     },
     {
       "id": 4,
@@ -215,7 +215,7 @@
           "text": "პირქუშსა და იდუმალებით მოცულს."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ბ"
     },
     {
       "id": 5,
@@ -240,7 +240,7 @@
           "text": "ჰიპერბოლა."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "გ"
     },
     {
       "id": 6,
@@ -265,7 +265,7 @@
           "text": "შეუძლებელია, რომ კაცს სამშობლო არ მოენატროს."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "გ"
     },
     {
       "id": 7,
@@ -290,7 +290,7 @@
           "text": "ჩემს სიტყვას დიდი ფასი ადევსო."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ბ"
     },
     {
       "id": 8,
@@ -315,7 +315,7 @@
           "text": "ჩემი შეხედულება არაფრად მიგაჩნიათო."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ა"
     },
     {
       "id": 9,
@@ -340,7 +340,7 @@
           "text": "კვირიას ღალატი ეჭვს არავისში არ იწვევს."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "გ"
     },
     {
       "id": 10,
@@ -365,7 +365,7 @@
           "text": "შედარება."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "გ"
     },
     {
       "id": 11,
@@ -390,7 +390,7 @@
           "text": "სიმტკიცე."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ა"
     }
   ],
   "essay": {

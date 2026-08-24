@@ -119,7 +119,7 @@
           "text": "შენთან შესახვედრად მოდიოდა და ალბათ გზა აერიაო."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ა"
     },
     {
       "id": 3,
@@ -144,7 +144,7 @@
           "text": "ჰიპერბოლა."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "დ"
     },
     {
       "id": 4,
@@ -169,7 +169,7 @@
           "text": "„მაგრა ავი ბედისაგან ჩემი რამცა გამიკვირდა!“"
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "გ"
     },
     {
       "id": 5,
@@ -194,7 +194,7 @@
           "text": "უგუნურებად მიმაჩნდა."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ა"
     },
     {
       "id": 6,
@@ -219,7 +219,7 @@
           "text": "შერისხულია."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ბ"
     },
     {
       "id": 7,
@@ -244,7 +244,7 @@
           "text": "სარკაზმი."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ბ"
     },
     {
       "id": 8,
@@ -269,7 +269,7 @@
           "text": "პირობას ვერ შევასრულებ, რადგან გულის კარნახით ვმოქმედებ."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ბ"
     },
     {
       "id": 9,
@@ -294,7 +294,7 @@
           "text": "ავთანდილის აზრით, ფიცის გამტეხი ადამიანი დახმარებას არ იმსახურებს."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ა"
     },
     {
       "id": 10,
@@ -319,7 +319,7 @@
           "text": "შერმადინს."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ა"
     },
     {
       "id": 11,
@@ -344,7 +344,7 @@
           "text": "„წავალ, ვძებნი, ანუ ვპოვებ, ან სიკვდილი მოვიადრო“."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "დ"
     }
   ],
   "essay": {

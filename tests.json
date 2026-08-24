@@ -4,25 +4,25 @@
       "id": "abo-tbilelis-tsameba",
       "file": "test-abo-tbilelis-tsameba.json",
       "title": "ტექსტი II",
-      "author": "აბოს",
+      "author": "იოვანე საბანისძე",
       "work": "აბო თბილელის წამება",
       "order": 999,
       "source": "მონაკვეთი იოვანე საბანისძის თხზულებიდან „აბო თბილელის წამება“",
       "questionCount": 10,
       "hasEssay": true,
-      "keyComplete": false
+      "keyComplete": true
     },
     {
       "id": "ade-chamovida-psikologiuri-etiudi",
       "file": "test-ade-chamovida-psikologiuri-etiudi.json",
       "title": "ტექსტი II",
-      "author": "ადე",
-      "work": "ადე, ჩამოვიდა (ფსიქოლოგიური ეტიუდი)",
+      "author": "შიო არაგვისპირელი",
+      "work": "ადე, ჩამოვიდა  (ფსიქოლოგიური ეტიუდი)",
       "order": 999,
       "source": "მონაკვეთები შიო არაგვისპირელის თხზულებიდან „ადე, ჩამოვიდა (ფსიქოლოგიური ეტიუდი)“",
       "questionCount": 10,
       "hasEssay": true,
-      "keyComplete": false
+      "keyComplete": true
     },
     {
       "id": "aivniani-kalaki",
@@ -34,7 +34,7 @@
       "source": "ნაწყვეტი ნიკოლოზ გაბაონის რომანიდან „აივნიანი ქალაქი“",
       "questionCount": 10,
       "hasEssay": true,
-      "keyComplete": false
+      "keyComplete": true
     },
     {
       "id": "amaqi",
@@ -46,7 +46,7 @@
       "source": "მონაკვეთები ნიკო ლორთქიფანიძის მოთხრობიდან „ამაყი“",
       "questionCount": 10,
       "hasEssay": true,
-      "keyComplete": false
+      "keyComplete": true
     },
     {
       "id": "ana-kalandadzes",
@@ -58,7 +58,7 @@
       "source": "მურმან ლებანიძის ლექსი „ანა კალანდაძეს“",
       "questionCount": 10,
       "hasEssay": true,
-      "keyComplete": false
+      "keyComplete": true
     },
     {
       "id": "asvla",
@@ -70,19 +70,19 @@
       "source": "მონაკვეთი გურამ რჩეულიშვილის მოთხრობიდან „ასვლა“",
       "questionCount": 10,
       "hasEssay": true,
-      "keyComplete": false
+      "keyComplete": true
     },
     {
       "id": "bakhtrioni",
       "file": "test-bakhtrioni.json",
       "title": "ტექსტი I",
-      "author": "მონაკვეთი ვაჟა-ფშაველას",
+      "author": "ვაჟა-ფშაველა",
       "work": "ბახტრიონი",
       "order": 999,
       "source": "მონაკვეთი ვაჟა-ფშაველას პოემიდან „ბახტრიონი“",
       "questionCount": 10,
       "hasEssay": true,
-      "keyComplete": false
+      "keyComplete": true
     },
     {
       "id": "barklai-de-tolis-sizmrebi",
@@ -94,7 +94,7 @@
       "source": "ნაწყვეტი ნოდარ წულეისკირის მოთხრობიდან „ბარკლაი დე ტოლის სიზმრები“",
       "questionCount": 10,
       "hasEssay": true,
-      "keyComplete": false
+      "keyComplete": true
     },
     {
       "id": "chadrakis-mskhverpli",
@@ -106,19 +106,19 @@
       "source": "შოთა ჩანტლაძის მოთხრობა „ჭადრაკის მსხვერპლი“",
       "questionCount": 10,
       "hasEssay": true,
-      "keyComplete": false
+      "keyComplete": true
     },
     {
       "id": "chemi-vedreba",
       "file": "test-chemi-vedreba.json",
       "title": "ტექსტი I",
-      "author": "წაიკითხეთ ვაჟა-ფშაველას",
+      "author": "ვაჟა-ფშაველა",
       "work": "ჩემი ვედრება",
       "order": 999,
       "source": "ვაჟა-ფშაველას ლექსი „ჩემი ვედრება“",
       "questionCount": 10,
       "hasEssay": true,
-      "keyComplete": false
+      "keyComplete": true
     },
     {
       "id": "data-tutashkhia",
@@ -130,7 +130,7 @@
       "source": "მონაკვეთები ჭაბუა ამირეჯიბის რომანიდან „დათა თუთაშხია“",
       "questionCount": 10,
       "hasEssay": true,
-      "keyComplete": false
+      "keyComplete": true
     },
     {
       "id": "davitiani",
@@ -142,7 +142,7 @@
       "source": "მონაკვეთი დავით გურამიშვილის პოემიდან „დავითიანი“",
       "questionCount": 10,
       "hasEssay": true,
-      "keyComplete": false
+      "keyComplete": true
     },
     {
       "id": "devnili",
@@ -154,7 +154,7 @@
       "source": "ნაწყვეტები გურამ გეგეშიძის მოთხრობიდან „დევნილი“",
       "questionCount": 10,
       "hasEssay": true,
-      "keyComplete": false
+      "keyComplete": true
     },
     {
       "id": "didostatis-marjvena",
@@ -166,7 +166,7 @@
       "source": "მონაკვეთები კონსტანტინე გამსახურდიას რომანიდან „დიდოსტატის მარჯვენა“",
       "questionCount": 10,
       "hasEssay": true,
-      "keyComplete": false
+      "keyComplete": true
     },
     {
       "id": "dzveli-simghera",
@@ -178,7 +178,7 @@
       "source": "დავით წერედიანის ლექსი „ძველი სიმღერა“, რომელიც მეფის რუსეთის წინააღმდეგ ხალდის აჯანყებას ეძღვნება",
       "questionCount": 10,
       "hasEssay": true,
-      "keyComplete": false
+      "keyComplete": true
     },
     {
       "id": "gamigonia-mtiel-khvaramzes",
@@ -190,7 +190,7 @@
       "source": "ლია სტურუას ლექსი „გამიგონია, მთიელ ხვარამზეს...“",
       "questionCount": 10,
       "hasEssay": true,
-      "keyComplete": false
+      "keyComplete": true
     },
     {
       "id": "gamzrdeli",
@@ -202,7 +202,7 @@
       "source": "მონაკვეთი აკაკი წერეთლის პოემიდან „გამზრდელი“",
       "questionCount": 10,
       "hasEssay": true,
-      "keyComplete": false
+      "keyComplete": true
     },
     {
       "id": "gmirta-varami",
@@ -214,19 +214,19 @@
       "source": "მონაკვეთი ლევან გოთუას რომანიდან „გმირთა ვარამი“, რომელშიც დაკარგული ოჯახის წევრების მოსაძებნად წასული ქალების ამბავია მოთხრობილი",
       "questionCount": 10,
       "hasEssay": true,
-      "keyComplete": false
+      "keyComplete": true
     },
     {
-      "id": "grigol-khandztelis-tskhovreba",
-      "file": "test-grigol-khandztelis-tskhovreba.json",
+      "id": "grigol-khandztelis-tskhovrebaa",
+      "file": "test-grigol-khandztelis-tskhovrebaa.json",
       "title": "ტექსტი II",
-      "author": "გრიგოლ",
+      "author": "გიორგი მერჩულე",
       "work": "გრიგოლ ხანძთელის ცხოვრება",
       "order": 999,
-      "source": "მონაკვეთი გიორგი მერჩულის თხზულებიდან „გრიგოლ ხანძთელის ცხოვრება“",
+      "source": "ბრძნად მეტყველება“",
       "questionCount": 10,
       "hasEssay": true,
-      "keyComplete": false
+      "keyComplete": true
     },
     {
       "id": "igi",
@@ -238,19 +238,31 @@
       "source": "მონაკვეთი ჯემალ ქარჩხაძის მოთხრობიდან „იგი“",
       "questionCount": 10,
       "hasEssay": true,
-      "keyComplete": false
+      "keyComplete": true
     },
     {
       "id": "jaqos-khiznebi",
       "file": "test-jaqos-khiznebi.json",
       "title": "ტექსტი II",
       "author": "მიხეილ ჯავახიშვილი",
-      "work": "ჯაყოს ხიზნები",
+      "work": "ჯაყოს ხიზნები (აქვს თუ არა ფასი ცოდნას...)",
       "order": 999,
       "source": "მონაკვეთი მიხეილ ჯავახიშვილის მოთხრობიდან „ჯაყოს ხიზნები“",
       "questionCount": 10,
       "hasEssay": true,
-      "keyComplete": false
+      "keyComplete": true
+    },
+    {
+      "id": "jaqos-khiznebii",
+      "file": "test-jaqos-khiznebii.json",
+      "title": "ტექსტი II",
+      "author": "მიხეილ ჯავახიშვილი",
+      "work": "ჯაყოს ხიზნები (ჯაყოსა და მარგოს ქორწილი)",
+      "order": 999,
+      "source": "ქორწილის სცენა",
+      "questionCount": 10,
+      "hasEssay": true,
+      "keyComplete": true
     },
     {
       "id": "kartopilis-amogheba",
@@ -262,7 +274,7 @@
       "source": "მონაკვეთები ბესიკ ხარანაულის ლექსიდან „კარტოფილის ამოღება“",
       "questionCount": 10,
       "hasEssay": true,
-      "keyComplete": false
+      "keyComplete": true
     },
     {
       "id": "katsia-adamiani",
@@ -274,7 +286,7 @@
       "source": "ნაწყვეტი ილია ჭავჭავაძის მოთხრობიდან „კაცია-ადამიანი?!“",
       "questionCount": 10,
       "hasEssay": true,
-      "keyComplete": false
+      "keyComplete": true
     },
     {
       "id": "khevisberi-gocha",
@@ -286,19 +298,19 @@
       "source": "მონაკვეთი ალექსანდრე ყაზბეგის მოთხრობიდან „ხევისბერი გოჩა“",
       "questionCount": 10,
       "hasEssay": true,
-      "keyComplete": false
+      "keyComplete": true
     },
     {
       "id": "leksi-vepkhvisa-da-moqmisa",
       "file": "test-leksi-vepkhvisa-da-moqmisa.json",
       "title": "ტექსტი I",
-      "author": "წაიკითხეთ ხალხური",
+      "author": "ხალხური",
       "work": "ლექსი ვეფხვისა და მოყმისა",
       "order": 999,
       "source": "ხალხური „ლექსი ვეფხვისა და მოყმისა“",
       "questionCount": 10,
       "hasEssay": true,
-      "keyComplete": false
+      "keyComplete": true
     },
     {
       "id": "merani",
@@ -310,7 +322,7 @@
       "source": "ნიკოლოზ ბარათაშვილის ლექსი „მერანი“",
       "questionCount": 10,
       "hasEssay": true,
-      "keyComplete": false
+      "keyComplete": true
     },
     {
       "id": "mgzavris-tserilebi",
@@ -322,7 +334,7 @@
       "source": "მონაკვეთები ილია ჭავჭავაძის მოთხრობიდან „მგზავრის წერილები“",
       "questionCount": 10,
       "hasEssay": true,
-      "keyComplete": false
+      "keyComplete": true
     },
     {
       "id": "mtatsmindis-mtvare",
@@ -334,7 +346,7 @@
       "source": "გალაკტიონ ტაბიძის ლექსი „მთაწმინდის მთვარე“",
       "questionCount": 10,
       "hasEssay": true,
-      "keyComplete": false
+      "keyComplete": true
     },
     {
       "id": "nu-tsakhval-ise-rom-aravis-ar-stse-nugeshi",
@@ -346,7 +358,7 @@
       "source": "გივი გეგეჭკორის ლექსი „ნუ წახვალ ისე, რომ არავის არ სცე ნუგეში“",
       "questionCount": 10,
       "hasEssay": true,
-      "keyComplete": false
+      "keyComplete": true
     },
     {
       "id": "obole",
@@ -358,7 +370,7 @@
       "source": "მონაკვეთი აკა მორჩილაძის რომანიდან „ობოლე“, რომელშიც მთავარი პერსონაჟი მკითხველს თავისი წინაპრებისა და მშობლიური კუთხის, ლეჩხუმის, ისტორიას უყვება",
       "questionCount": 10,
       "hasEssay": true,
-      "keyComplete": false
+      "keyComplete": true
     },
     {
       "id": "otaraant-kvrivi",
@@ -370,7 +382,7 @@
       "source": "მონაკვეთები ილია ჭავჭავაძის მოთხრობიდან „ოთარაანთ ქვრივი“",
       "questionCount": 10,
       "hasEssay": true,
-      "keyComplete": false
+      "keyComplete": true
     },
     {
       "id": "peodali",
@@ -382,7 +394,7 @@
       "source": "გივი გეგეჭკორის ლექსი „ფეოდალი“",
       "questionCount": 10,
       "hasEssay": true,
-      "keyComplete": false
+      "keyComplete": true
     },
     {
       "id": "pikrni-mtkvris-piras",
@@ -394,7 +406,7 @@
       "source": "ნიკოლოზ ბარათაშვილის ლექსი „ფიქრნი მტკვრის პირას“",
       "questionCount": 10,
       "hasEssay": true,
-      "keyComplete": false
+      "keyComplete": true
     },
     {
       "id": "pirosmani",
@@ -406,7 +418,7 @@
       "source": "რევაზ ინანიშვილის მოთხრობა „ფიროსმანი“",
       "questionCount": 10,
       "hasEssay": true,
-      "keyComplete": false
+      "keyComplete": true
     },
     {
       "id": "qivchaghis-paemani",
@@ -418,7 +430,7 @@
       "source": "გიორგი ლეონიძის ლექსი „ყივჩაღის პაემანი“",
       "questionCount": 10,
       "hasEssay": true,
-      "keyComplete": false
+      "keyComplete": true
     },
     {
       "id": "qvarlis-mtebs",
@@ -430,7 +442,7 @@
       "source": "ილია ჭავჭავაძის ლექსი „ყვარლის მთებს“",
       "questionCount": 10,
       "hasEssay": true,
-      "keyComplete": false
+      "keyComplete": true
     },
     {
       "id": "rachis-eristavi-rostom",
@@ -442,7 +454,7 @@
       "source": "აკაკი წერეთლის მოთხრობა „რაჭის ერისთავი როსტომ“",
       "questionCount": 10,
       "hasEssay": true,
-      "keyComplete": false
+      "keyComplete": true
     },
     {
       "id": "sakhli",
@@ -454,7 +466,7 @@
       "source": "ოთარ ჭილაძის ლექსი „სახლი“",
       "questionCount": 10,
       "hasEssay": true,
-      "keyComplete": false
+      "keyComplete": true
     },
     {
       "id": "samoseli-pirveli",
@@ -466,7 +478,7 @@
       "source": "მონაკვეთები გურამ დოჩანაშვილის რომანიდან „სამოსელი პირველი“",
       "questionCount": 10,
       "hasEssay": true,
-      "keyComplete": false
+      "keyComplete": true
     },
     {
       "id": "shuadghe",
@@ -478,19 +490,31 @@
       "source": "მონაკვეთი თამაზ ჭილაძის მოთხრობიდან „შუადღე“. მოთხრობის პერსონაჟი გოგი მოგვითხრობს",
       "questionCount": 10,
       "hasEssay": true,
-      "keyComplete": false
+      "keyComplete": true
     },
     {
       "id": "shushanikis-tsameba",
       "file": "test-shushanikis-tsameba.json",
       "title": "ტექსტი II",
-      "author": "შუშანიკის",
-      "work": "შუშანიკის წამება",
+      "author": "იაკობ ხუცესი",
+      "work": "შუშანიკის წამება (დაყოლიება, დაბრუნდეს სასახლეში)",
       "order": 999,
       "source": "მონაკვეთები იაკობ ხუცესის თხზულებიდან „შუშანიკის წამება“",
       "questionCount": 10,
       "hasEssay": true,
-      "keyComplete": false
+      "keyComplete": true
+    },
+    {
+      "id": "shushanikis-tsamebaa",
+      "file": "test-shushanikis-tsamebaa.json",
+      "title": "ტექსტი II",
+      "author": "იაკობ ხუცესი",
+      "work": "შუშანიკის წამება (გარდაუვალი განსაცდელი...)",
+      "order": 999,
+      "source": "ქართლში დაბრუნება",
+      "questionCount": 10,
+      "hasEssay": true,
+      "keyComplete": true
     },
     {
       "id": "simghera-davit-guramishvilze",
@@ -502,19 +526,31 @@
       "source": "მონაკვეთი სიმონ ჩიქოვანის პოემიდან „სიმღერა დავით გურამიშვილზე“ („დავით გურამიშვილის გაბაასება საწუთროსთან“)",
       "questionCount": 10,
       "hasEssay": true,
-      "keyComplete": false
+      "keyComplete": true
     },
     {
       "id": "stumar-maspindzeli",
       "file": "test-stumar-maspindzeli.json",
       "title": "ტექსტი I",
-      "author": "მონაკვეთი ვაჟა-ფშაველას",
-      "work": "სტუმარ-მასპინძელი",
+      "author": "ვაჟა-ფშაველა",
+      "work": "სტუმარ-მასპინძელი (საფლავზე დაკვლა)",
       "order": 999,
       "source": "მონაკვეთი ვაჟა-ფშაველას პოემიდან „სტუმარ-მასპინძელი“",
       "questionCount": 10,
       "hasEssay": true,
-      "keyComplete": false
+      "keyComplete": true
+    },
+    {
+      "id": "stumar-maspindzelii",
+      "file": "test-stumar-maspindzelii.json",
+      "title": "ტექსტი I",
+      "author": "ვაჟა-ფშაველა",
+      "work": "სტუმარ-მასპინძელი (აღაზას ეპიზოდი)",
+      "order": 999,
+      "source": "აღაზა სასაფლაოზე",
+      "questionCount": 10,
+      "hasEssay": true,
+      "keyComplete": true
     },
     {
       "id": "tikhis-sami-pirpita",
@@ -526,7 +562,7 @@
       "source": "მონაკვეთები ოთარ ჭილაძის პოემიდან „თიხის სამი ფირფიტა“",
       "questionCount": 10,
       "hasEssay": true,
-      "keyComplete": false
+      "keyComplete": true
     },
     {
       "id": "tserili-dedas",
@@ -538,7 +574,7 @@
       "source": "პაოლო იაშვილის ლექსი „წერილი დედას“",
       "questionCount": 10,
       "hasEssay": true,
-      "keyComplete": false
+      "keyComplete": true
     },
     {
       "id": "va-sopelo",
@@ -550,115 +586,55 @@
       "source": "მონაკვეთი ზაირა არსენიშვილის რომანიდან „ვა, სოფელო...“. რომანის პერსონაჟი სპირიდონა შვილის გადასარჩენად თავის ძველ ნაცნობს, სახელმწიფო უშიშროების თანამშრომელ ალიოშას, მიაკითხავს. – ცნობაა საჭირო, ცნობა, ბიჭისთვის, უნივერსიტეტიდან რომ არ გამორიცხონ, სოცმდგომარეობის ცნობა... – ამოიკვნესა სპირიდონამ.",
       "questionCount": 10,
       "hasEssay": true,
-      "keyComplete": false
+      "keyComplete": true
     },
-        {
-    "id": "vepkhistqaosaniii",
-    "file": "test-vepkhistqaosaniii.json",
-    "title": "ტექსტი I",
-    "author": "რუსთაველი",
-    "work": "ვეფხისტყაოსანი (ტარიელი გამოქვაბულში არ დახვდა)",
-    "order": 999,
-    "source": "„ვეფხისტყაოსნის“ მონაკვეთი, რომელშიც მოთხრობილია, თუ როგორ დაბრუნდა ავთანდილი ტარიელთან, რომელიც, მიუხედავად შეთანხმებისა, გამოქვაბულში არ დახვდა",
-    "questionCount": 10,
-    "hasEssay": true,
-    "keyComplete": false
-  },
-  {
-    "id": "vepkhistqaosaniiii",
-    "file": "test-vepkhistqaosaniiii.json",
-    "title": "ტექსტი I",
-    "author": "რუსთაველი",
-    "work": "ვეფხისტყაოსანი (მეფე საწოლს შემოვიდა...)",
-    "order": 999,
-    "source": "„ვეფხისტყაოსნის“ მონაკვეთი",
-    "questionCount": 10,
-    "hasEssay": true,
-    "keyComplete": false
-  },
-  {
-    "id": "vepkhistqaosanii",
-    "file": "test-vepkhistqaosanii.json",
-    "title": "ტექსტი I",
-    "author": "რუსთაველი",
-    "work": "ვეფხისტყაოსანი (რამაზის შეწყნარება)",
-    "order": 999,
-    "source": "„ვეფხისტყაოსნის“ მონაკვეთი, რომელშიც მოთხრობილია ხატაელებთან ომში გამარჯვებული ტარიელის ინდოეთში დაბრუნების ამბავი",
-    "questionCount": 10,
-    "hasEssay": true,
-    "keyComplete": false
-  },
-  {
-    "id": "vepkhistqaosniiiiii",
-    "file": "test-vepkhistqaosniiiiii.json",
-    "title": "ტექსტი I",
-    "author": "რუსთაველი",
-    "work": "ვეფხისტყაოსნი (მოედანს დავდგი...)",
-    "order": 999,
-    "source": "მონაკვეთი „ვეფხისტყაოსნიდან“",
-    "questionCount": 10,
-    "hasEssay": true,
-    "keyComplete": false
-  },
-  {
-    "id": "vepkhistqaosniiiiiii",
-    "file": "test-vepkhistqaosniiiiiii.json",
-    "title": "ტექსტი I",
-    "author": "რუსთაველი",
-    "work": "ვეფხისტყაოსანი (ამოა რომე...)",
-    "order": 999,
-    "source": "შოთა რუსთაველის „ვეფხისტყაოსნიდან“ მონაკვეთი, რომელშიც ტარიელისა და ავთანდილის მეორე შეხვედრა არის აღწერილი",
-    "questionCount": 10,
-    "hasEssay": true,
-    "keyComplete": false
-  },
-  {
-    "id": "grigol-khandztelis-tskhovrebaa",
-    "file": "test-grigol-khandztelis-tskhovrebaa.json",
-    "title": "ტექსტი II",
-    "author": "გიორგი მერჩულე",
-    "work": "გრიგოლ ხანძთელის ცხოვრება",
-    "order": 999,
-    "source": "ბრძნად მეტყველებაა",
-    "questionCount": 10,
-    "hasEssay": true,
-    "keyComplete": false
-  },
-  {
-    "id": "jaqos-khiznebii",
-    "file": "test-jaqos-khiznebii.json",
-    "title": "ტექსტი II",
-    "author": "მიხეილ ჯავახიშვილი",
-    "work": "ჯაყოს ხიზნები",
-    "order": 999,
-    "source": "ქორწილის სცენა",
-    "questionCount": 10,
-    "hasEssay": true,
-    "keyComplete": false
-  },
-  {
-    "id": "shushanikis-tsamebaa",
-    "file": "test-shushanikis-tsamebaa.json",
-    "title": "ტექსტი II",
-    "author": "იაკობ ცურტაველი",
-    "work": "შუშანიკის წამება",
-    "order": 999,
-    "source": "ქართლში დაბრუნება",
-    "questionCount": 10,
-    "hasEssay": true,
-    "keyComplete": false
-  },
-  {
-    "id": "stumar-maspindzelii",
-    "file": "test-stumar-maspindzelii.json",
-    "title": "ტექსტი I",
-    "author": "ვაჟა-ფშაველა",
-    "work": "სტუმარ-მასპინძელი",
-    "order": 999,
-    "source": "აღაზა სასაფლაოზე",
-    "questionCount": 10,
-    "hasEssay": true,
-    "keyComplete": false
+    {
+      "id": "vepkhistqaosanii",
+      "file": "test-vepkhistqaosanii.json",
+      "title": "ტექსტი I",
+      "author": "რუსთაველი",
+      "work": "ვეფხისტყაოსანი (რამაზის შეწყნარება)",
+      "order": 999,
+      "source": "„ვეფხისტყაოსნის“ მონაკვეთი, რომელშიც მოთხრობილია ხატაელებთან ომში გამარჯვებული ტარიელის ინდოეთში დაბრუნების ამბავი",
+      "questionCount": 10,
+      "hasEssay": true,
+      "keyComplete": true
+    },
+    {
+      "id": "vepkhistqaosaniii",
+      "file": "test-vepkhistqaosaniii.json",
+      "title": "ტექსტი I",
+      "author": "რუსთაველი",
+      "work": "ვეფხისტყაოსანი (ტარიელი გამოქვაბულში არ დახვდა)",
+      "order": 999,
+      "source": "„ვეფხისტყაოსნის“ მონაკვეთი, რომელშიც მოთხრობილია, თუ როგორ დაბრუნდა ავთანდილი ტარიელთან, რომელიც, მიუხედავად შეთანხმებისა, გამოქვაბულში არ დახვდა",
+      "questionCount": 10,
+      "hasEssay": true,
+      "keyComplete": true
+    },
+    {
+      "id": "vepkhistqaosaniiii",
+      "file": "test-vepkhistqaosaniiii.json",
+      "title": "ტექსტი I",
+      "author": "რუსთაველი",
+      "work": "ვეფხისტყაოსანი (მეფე საწოლს შემოვიდა...)",
+      "order": 999,
+      "source": "„ვეფხისტყაოსნის“ მონაკვეთი",
+      "questionCount": 10,
+      "hasEssay": true,
+      "keyComplete": true
+    },
+    {
+      "id": "vepkhistqaosniiiiii",
+      "file": "test-vepkhistqaosniiiiii.json",
+      "title": "ტექსტი I",
+      "author": "რუსთაველი",
+      "work": "ვეფხისტყაოსნი (მოედანს დავდგი...)",
+      "order": 999,
+      "source": "მონაკვეთი „ვეფხისტყაოსნიდან“",
+      "questionCount": 10,
+      "hasEssay": true,
+      "keyComplete": true
     },
     {
       "id": "voi",
@@ -670,7 +646,7 @@
       "source": "მურმან ლებანიძის ლექსი „ვოი!“, რომელიც მწვერვალ შხარაზე დაღუპულ ფოტოხელოვანსა და მთამსვლელს, გურამ თიკანაძეს, ეძღვნება",
       "questionCount": 10,
       "hasEssay": true,
-      "keyComplete": false
+      "keyComplete": true
     }
   ]
 }

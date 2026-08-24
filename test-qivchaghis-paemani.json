@@ -98,7 +98,7 @@
           "text": "ფაბულა."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ა"
     },
     {
       "id": 3,
@@ -123,7 +123,7 @@
           "text": "„მაგრამ თვითონაც დაილეწება, დაბადებულა ვინც კი ყივჩაღად“."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ა"
     },
     {
       "id": 4,
@@ -148,7 +148,7 @@
           "text": "ყურძნის წვენს."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "დ"
     },
     {
       "id": 5,
@@ -173,7 +173,7 @@
           "text": "ჰიპერბოლა."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ა"
     },
     {
       "id": 6,
@@ -198,7 +198,7 @@
           "text": "ხმლის ალესვით გამოწვეულ საბრძოლო შემართებას."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "გ"
     },
     {
       "id": 7,
@@ -223,7 +223,7 @@
           "text": "როგორც შურისმაძიებელ ადამიანს."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ა"
     },
     {
       "id": 8,
@@ -248,7 +248,7 @@
           "text": "შურისძიების დაუძლეველი სურვილი."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ა"
     },
     {
       "id": 9,
@@ -273,7 +273,7 @@
           "text": "წუთისოფლის დატოვებით გამოწვეული შიში."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ბ"
     },
     {
       "id": 10,
@@ -298,7 +298,7 @@
           "text": "ქართლის ხეობების დალაშქვრის."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "გ"
     },
     {
       "id": 11,
@@ -323,7 +323,7 @@
           "text": "ჰიპერბოლა."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "გ"
     }
   ],
   "essay": {

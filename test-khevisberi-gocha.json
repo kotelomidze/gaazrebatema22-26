@@ -64,7 +64,7 @@
           "text": "არ უნდოდა დამნაშავედ გამოეცხადებინათ."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "გ"
     },
     {
       "id": 3,
@@ -89,7 +89,7 @@
           "text": "გამამტყუნებელი ვითარებაა."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "გ"
     },
     {
       "id": 4,
@@ -114,7 +114,7 @@
           "text": "თემისაგან მოკვეთა თავიდან რომ აირიდოს."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ბ"
     },
     {
       "id": 5,
@@ -139,7 +139,7 @@
           "text": "შედარება."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ა"
     },
     {
       "id": 6,
@@ -164,7 +164,7 @@
           "text": "სურს, რომ გუგუა, რომელიც სასტიკად ისჯება, ღმერთს შეავედროს."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "გ"
     },
     {
       "id": 7,
@@ -189,7 +189,7 @@
           "text": "დაბეჩავებულია."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "გ"
     },
     {
       "id": 8,
@@ -214,7 +214,7 @@
           "text": "შეშინდა."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ა"
     },
     {
       "id": 9,
@@ -239,7 +239,7 @@
           "text": "თავშეკავებულობაზე."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "გ"
     },
     {
       "id": 10,
@@ -264,7 +264,7 @@
           "text": "„კარგა მღელვარებისა და ჩოჩქოლის შემდეგ თემის თავნი მიუახლოვდნენ გოჩას...“"
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ბ"
     },
     {
       "id": 11,
@@ -289,7 +289,7 @@
           "text": "თემში დამკვიდრებული ტრადიციის აბუჩად აგდების გამო."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ბ"
     }
   ],
   "essay": {

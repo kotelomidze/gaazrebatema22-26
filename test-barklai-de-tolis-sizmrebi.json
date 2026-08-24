@@ -71,7 +71,7 @@
           "text": "ძალიან გაიკვირვა."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "დ"
     },
     {
       "id": 3,
@@ -96,7 +96,7 @@
           "text": "გაპიროვნება."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "დ"
     },
     {
       "id": 4,
@@ -121,7 +121,7 @@
           "text": "ამპარტავნობაზე."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ა"
     },
     {
       "id": 5,
@@ -146,7 +146,7 @@
           "text": "ყველაფერს თანაბრად ვინაწილებდით."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ბ"
     },
     {
       "id": 6,
@@ -171,7 +171,7 @@
           "text": "წინდახედულობას."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ა"
     },
     {
       "id": 7,
@@ -196,7 +196,7 @@
           "text": "საომრად ხომ არ გვიწვევსო."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ბ"
     },
     {
       "id": 8,
@@ -221,7 +221,7 @@
           "text": "უანგარობაზე."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ბ"
     },
     {
       "id": 9,
@@ -246,7 +246,7 @@
           "text": "უფროსის ბრძანებას რომ არავინ დაემორჩილა."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ბ"
     },
     {
       "id": 10,
@@ -271,7 +271,7 @@
           "text": "გაპიროვნება."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ბ"
     },
     {
       "id": 11,
@@ -296,7 +296,7 @@
           "text": "რადგან ომის დროს უყურადღებობა დამღუპველია."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ბ"
     }
   ],
   "essay": {

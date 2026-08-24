@@ -61,6 +61,8 @@
   .bar .wrap { display:flex; gap:12px; align-items:center; flex-wrap:wrap; padding-bottom:0; }
   .msg { font-size:13px; color:var(--emerald); font-weight:600; }
   .hint { font-size:13px; color:var(--muted); line-height:1.7; }
+  .alert { background:#fff1f2; border:1px solid #fecdd3; color:#9f1239; border-radius:14px;
+           padding:14px 16px; margin-bottom:16px; font-size:13.5px; line-height:1.7; }
   code { background:#f1f5f9; padding:2px 6px; border-radius:6px; font-size:13px; }
 </style>
 </head>
@@ -83,6 +85,7 @@
 
 <div class="wrap">
   <p class="hint" id="status">იტვირთება…</p>
+  <div id="problems"></div>
   <div id="rows"></div>
 
   <p class="hint" style="margin-top:20px">
@@ -123,6 +126,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
   const tests = [];          // სრული ტესტები
   let indexItems = [];
   const changed = new Set();
+  let removedFromIndex = false;
 
   const edits = (() => {
     try { return JSON.parse(localStorage.getItem(STORE)) || {}; }
@@ -158,9 +162,15 @@ https://github.com/nodeca/pako/blob/main/LICENSE
     .then(async data => {
       indexItems = data.tests || [];
       $('status').textContent = `იტვირთება ${indexItems.length} ტესტი…`;
+      const problems = [];
       for (const item of indexItems) {
+        const fileName = item.file || ('test-' + item.id + '.json');
         try {
-          const res = await fetch(item.file || ('test-' + item.id + '.json'), { cache: 'no-store' });
+          const res = await fetch(fileName, { cache: 'no-store' });
+          if (!res.ok) {
+            problems.push({ file: fileName, item, why: res.status === 404 ? 'ფაილი არ არის ატვირთული' : 'სერვერის შეცდომა ' + res.status });
+            continue;
+          }
           const t = await res.json();
           const saved = edits[t.id];
           if (saved) {
@@ -171,8 +181,11 @@ https://github.com/nodeca/pako/blob/main/LICENSE
             changed.add(t.id);
           }
           tests.push(t);
-        } catch (e) { /* ერთი ფაილის შეცდომა დანარჩენს არ აჩერებს */ }
+        } catch (e) {
+          problems.push({ file: fileName, item, why: 'ფაილი დაზიანებულია (JSON არ იკითხება)' });
+        }
       }
+      showProblems(problems);
       $('status').textContent = '';
       render();
       refreshCounters();
@@ -180,6 +193,50 @@ https://github.com/nodeca/pako/blob/main/LICENSE
     .catch(() => {
       $('status').textContent = 'tests.json ვერ ჩაიტვირთა — გახსენი ეს გვერდი საიტის ბმულიდან.';
     });
+
+  /* ---------- პრობლემები ---------- */
+
+  function showProblems(problems) {
+    const box = $('problems');
+    box.innerHTML = '';
+    if (!problems.length) return;
+
+    const div = document.createElement('div');
+    div.className = 'alert';
+    const h = document.createElement('div');
+    h.style.fontWeight = '700';
+    h.style.marginBottom = '6px';
+    h.textContent = `${problems.length} ტესტი სიაშია, მაგრამ ფაილი ვერ ჩაიტვირთა:`;
+    div.appendChild(h);
+
+    problems.forEach(p => {
+      const line = document.createElement('div');
+      const label = [p.item.author, p.item.work].filter(Boolean).join(' — ') || p.item.id;
+      line.textContent = `· ${label} → ${p.file} (${p.why})`;
+      div.appendChild(line);
+    });
+
+    const tip = document.createElement('div');
+    tip.style.marginTop = '8px';
+    tip.textContent = 'ატვირთე ეს ფაილები GitHub-ზე კონვერტერიდან ხელახლა — ან, თუ აღარ გჭირდება, წაშალე ჩანაწერი „სიიდან ამოღება" ღილაკით.';
+    div.appendChild(tip);
+
+    const btn = document.createElement('button');
+    btn.className = 'ghost';
+    btn.type = 'button';
+    btn.style.marginTop = '10px';
+    btn.textContent = 'სიიდან ამოღება (' + problems.length + ')';
+    btn.addEventListener('click', () => {
+      if (!confirm('ეს ჩანაწერები სიიდან ამოიშლება. ტესტების ფაილებს არ ეხება. გავაგრძელო?')) return;
+      const bad = new Set(problems.map(p => p.item.id));
+      indexItems = indexItems.filter(x => !bad.has(x.id));
+      removedFromIndex = true;
+      box.innerHTML = '';
+      refreshCounters();
+    });
+    div.appendChild(btn);
+    box.appendChild(div);
+  }
 
   /* ---------- გამოსახვა ---------- */
 
@@ -307,7 +364,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
     const done = tests.filter(isDone).length;
     $('changed').textContent = `გასაღები შევსებულია ${done} / ${tests.length}` +
       (changed.size ? ` · შეცვლილია ${changed.size}` : '');
-    $('dl').disabled = changed.size === 0;
+    $('dl').disabled = changed.size === 0 && !removedFromIndex;
     applyFilter();
   }
 

@@ -118,7 +118,7 @@
           "text": "შემოქმედებას."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ა"
     },
     {
       "id": 3,
@@ -143,7 +143,7 @@
           "text": "სინამდვილეს სუბიექტურად და ტენდენციურად ასახავს."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "გ"
     },
     {
       "id": 4,
@@ -168,7 +168,7 @@
           "text": "ჰიპერბოლა."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ბ"
     },
     {
       "id": 5,
@@ -193,7 +193,7 @@
           "text": "მოუთმენლობას."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "გ"
     },
     {
       "id": 6,
@@ -218,7 +218,7 @@
           "text": "„ყელზე დამკიდე წკრიალა ზარი“."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "გ"
     },
     {
       "id": 7,
@@ -243,7 +243,7 @@
           "text": "სიბერეს არ უშინდება."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "გ"
     },
     {
       "id": 8,
@@ -268,7 +268,7 @@
           "text": "სიცოცხლეშივე აღიარება მოიპოვა."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ა"
     },
     {
       "id": 9,
@@ -293,7 +293,7 @@
           "text": "წერას მიკრძალავდი."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ა"
     },
     {
       "id": 10,
@@ -318,7 +318,7 @@
           "text": "„ყმაწვილი უნდა სწავლობდეს, საცნობლად თავისადაო“."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ა"
     },
     {
       "id": 11,
@@ -343,7 +343,7 @@
           "text": "მისი ცხოვრება ობიექტურად აღწერონ."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ბ"
     }
   ],
   "essay": {

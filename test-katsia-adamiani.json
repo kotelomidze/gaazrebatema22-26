@@ -106,7 +106,7 @@
           "text": "ეჭვობდა, რომ ცოლ-ქმარს ვერ დაეხმარებოდა, თუმცა ამას მაინც ცდილობდა."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ა"
     },
     {
       "id": 3,
@@ -131,7 +131,7 @@
           "text": "თავდაჯერებას."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "დ"
     },
     {
       "id": 4,
@@ -156,7 +156,7 @@
           "text": "სიჯიუტე."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ა"
     },
     {
       "id": 5,
@@ -181,7 +181,7 @@
           "text": "ირონიული."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "დ"
     },
     {
       "id": 6,
@@ -206,7 +206,7 @@
           "text": "ყურადღებას იჩენს."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ბ"
     },
     {
       "id": 7,
@@ -231,7 +231,7 @@
           "text": "ჰიპერბოლა."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "გ"
     },
     {
       "id": 8,
@@ -256,7 +256,7 @@
           "text": "სურდა თავისი ნათქვამისათვის მეტი დამაჯერებლობა მიენიჭებინა."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "დ"
     },
     {
       "id": 9,
@@ -281,7 +281,7 @@
           "text": "იმედი ჰქონდა, რომ დარეჯანი ჯადოს ძალას დაუკარგავდა."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ა"
     },
     {
       "id": 10,
@@ -306,7 +306,7 @@
           "text": "ვერ შემაჩერებს."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ბ"
     },
     {
       "id": 11,
@@ -331,7 +331,7 @@
           "text": "წინდაუხედაობა."
         }
       ],
-      "correctAnswer": ""
+      "correctAnswer": "ბ"
     }
   ],
   "essay": {
