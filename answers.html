@@ -61,6 +61,13 @@
   .bar .wrap { display:flex; gap:12px; align-items:center; flex-wrap:wrap; padding-bottom:0; }
   .msg { font-size:13px; color:var(--emerald); font-weight:600; }
   .hint { font-size:13px; color:var(--muted); line-height:1.7; }
+  .suspect { background:#fffbeb; border:1px solid #fde68a; color:#92400e; border-radius:8px;
+             padding:6px 10px; font-size:12.5px; margin:0 0 7px; }
+  .editable { outline:none; border-bottom:1px dashed transparent; }
+  .editable:hover { border-bottom-color:#cbd5e1; }
+  .editable:focus { border-bottom-color:var(--indigo); background:#eef2ff; }
+  .flag { font-size:12px; font-weight:700; color:#b45309; background:#fef3c7;
+          border-radius:999px; padding:3px 9px; }
   .alert { background:#fff1f2; border:1px solid #fecdd3; color:#9f1239; border-radius:14px;
            padding:14px 16px; margin-bottom:16px; font-size:13.5px; line-height:1.7; }
   code { background:#f1f5f9; padding:2px 6px; border-radius:6px; font-size:13px; }
@@ -79,6 +86,7 @@
   <div class="wrap">
     <input type="search" id="q" placeholder="ძებნა ავტორზე ან ნაწარმოებზე">
     <label class="check"><input type="checkbox" id="onlyMissing"> მხოლოდ გასაღების გარეშე</label>
+    <label class="check"><input type="checkbox" id="onlySuspect"> მხოლოდ საეჭვო კითხვები</label>
     <span class="count" id="count"></span>
   </div>
 </div>
@@ -92,7 +100,9 @@
     <b>გასაღების შევსება:</b> დააწკაპე „პასუხები" ველზე და აკრიფე ათი ასო ზედიზედ — <code>გააბააგგგდ</code>.
     გამოტოვება არ არის საჭირო. Tab-ით შემდეგ ტესტზე გადახვალ.<br>
     <b>სათაურის შესწორება:</b> ავტორისა და ნაწარმოების ველები პირდაპირ იცვლება.<br>
-    <b>შენახვა:</b> ცვლილებები ბრაუზერშიც ინახება, ასე რომ გვერდის დახურვა არაფერს კარგავს.
+    <b>შენახვა:</b> ცვლილებები ბრაუზერშიც ინახება, ასე რომ გვერდის დახურვა არაფერს კარგავს.<br>
+    <b>საეჭვო კითხვები:</b> ⚠ ნიშნავს, რომ კითხვას შესაძლოა ტექსტი აკლდეს — მაგალითად ციტატა.
+    კითხვის ტექსტზე პირდაპირ დააწკაპე და ჩაასწორე.
   </p>
 </div>
 
@@ -145,6 +155,40 @@ https://github.com/nodeca/pako/blob/main/LICENSE
     };
     saveEdits();
     refreshCounters();
+  }
+
+  /**
+   * კითხვა, რომელსაც ტექსტი აკლია. ტიპური შემთხვევა:
+   * „რომელი მხატვრული საშუალებაა:“ — ციტატა PDF-ში ცალკე ხაზზე იყო და დაიკარგა.
+   */
+  function suspectReasons(q) {
+    const text = (q.text || '').trim();
+    const reasons = [];
+
+    if (/[:;]\s*$/.test(text)) reasons.push('მთავრდება ორწერტილით — ციტატა აკლია');
+    else if (!/[?!.…„“»]\s*$/.test(text)) reasons.push('არ მთავრდება კითხვის ნიშნით');
+
+    const open = (text.match(/„/g) || []).length;
+    const close = (text.match(/“/g) || []).length;
+    if (open !== close) reasons.push('ბრჭყალი დაუხურავია');
+
+    if (text.length < 25) reasons.push('ძალიან მოკლეა');
+
+    // „საშუალებაა:“ ტიპის კითხვას ციტატა უნდა ჰქონდეს
+    if (/(საშუალებაა|სიტყვებით|ფრაზაში|სტრიქონში|ნიშნავს|გამოთქმა)/.test(text) && open === 0) {
+      reasons.push('ციტატა არ ჩანს');
+    }
+
+    q.options.forEach(o => {
+      if (!o.text || o.text.trim().length < 2) reasons.push('პასუხი ' + o.key + ' ცარიელია');
+    });
+    if (q.options.length !== 4) reasons.push('პასუხი ' + q.options.length + ' და არა 4');
+
+    return reasons;
+  }
+
+  function suspects(t) {
+    return t.questions.filter(q => suspectReasons(q).length);
   }
 
   function keyOf(t) {
@@ -282,6 +326,15 @@ https://github.com/nodeca/pako/blob/main/LICENSE
       key.classList.toggle('ok', isDone(t));
       head.appendChild(key);
 
+      const bad = suspects(t).length;
+      if (bad) {
+        const warn = document.createElement('span');
+        warn.className = 'flag';
+        warn.textContent = '⚠ ' + bad;
+        warn.title = bad + ' საეჭვო კითხვა';
+        head.appendChild(warn);
+      }
+
       const toggle = document.createElement('button');
       toggle.className = 'toggle';
       toggle.type = 'button';
@@ -299,8 +352,17 @@ https://github.com/nodeca/pako/blob/main/LICENSE
         const qt = document.createElement('div');
         qt.className = 'qt';
         qt.innerHTML = '<b>' + q.number + '.</b> ';
-        qt.appendChild(document.createTextNode(q.text));
+        const qtext = document.createElement('span');
+        qtext.textContent = q.text;
+        qtext.contentEditable = 'true';
+        qtext.className = 'editable';
+        qtext.title = 'ტექსტის ჩასწორება';
+        qtext.addEventListener('input', () => { q.text = qtext.textContent; markChanged(t); });
+        qtext.addEventListener('blur', () => { renderSuspectBadge(item, q); });
+        qt.appendChild(qtext);
         item.appendChild(qt);
+
+        renderSuspectBadge(item, q);
 
         const opts = document.createElement('div');
         opts.className = 'opts';
@@ -333,6 +395,17 @@ https://github.com/nodeca/pako/blob/main/LICENSE
     applyFilter();
   }
 
+  function renderSuspectBadge(item, q) {
+    const old = item.querySelector('.suspect');
+    if (old) old.remove();
+    const reasons = suspectReasons(q);
+    if (!reasons.length) return;
+    const b = document.createElement('div');
+    b.className = 'suspect';
+    b.textContent = '⚠ ' + reasons.join(' · ');
+    item.insertBefore(b, item.querySelector('.opts'));
+  }
+
   function syncOptionButtons(row, t) {
     row.querySelectorAll('.opt').forEach(btn => {
       const q = t.questions.find(x => String(x.number) === btn.dataset.q);
@@ -345,12 +418,16 @@ https://github.com/nodeca/pako/blob/main/LICENSE
   function applyFilter() {
     const needle = $('q').value.trim().toLowerCase();
     const onlyMissing = $('onlyMissing').checked;
+    const onlySuspect = $('onlySuspect').checked;
     let shown = 0;
     tests.forEach(t => {
       const row = $('rows').querySelector(`[data-id="${t.id}"]`);
       if (!row) return;
       const hay = [t.author, t.work, t.title, t.source].join(' ').toLowerCase();
-      const ok = (!needle || hay.includes(needle)) && (!onlyMissing || !isDone(t));
+      const ok = (!needle || hay.includes(needle))
+        && (!onlyMissing || !isDone(t))
+        && (!onlySuspect || suspects(t).length > 0);
+      if (onlySuspect && suspects(t).length) row.classList.add('open');
       row.classList.toggle('hidden', !ok);
       if (ok) shown++;
     });
@@ -359,10 +436,13 @@ https://github.com/nodeca/pako/blob/main/LICENSE
 
   $('q').addEventListener('input', applyFilter);
   $('onlyMissing').addEventListener('change', applyFilter);
+  $('onlySuspect').addEventListener('change', applyFilter);
 
   function refreshCounters() {
     const done = tests.filter(isDone).length;
+    const flagged = tests.reduce((n, t) => n + suspects(t).length, 0);
     $('changed').textContent = `გასაღები შევსებულია ${done} / ${tests.length}` +
+      (flagged ? ` · საეჭვო კითხვა ${flagged}` : '') +
       (changed.size ? ` · შეცვლილია ${changed.size}` : '');
     $('dl').disabled = changed.size === 0 && !removedFromIndex;
     applyFilter();

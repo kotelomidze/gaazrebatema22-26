@@ -504,15 +504,18 @@ function parseQuestions(lines) {
     // „იმსჯელეთ, ...“ — თხზულების მითითება, დავალების ფორმულირება არაა
     if (!current.options.length && /^იმსჯელეთ/.test(s)) {
       current.instruction = ((current.instruction || '') + ' ' + s).trim();
-      target = null;
+      target = 'instruction';
       continue;
     }
     if (target === 'option' && current.options.length) {
       current.options[current.options.length - 1].text += ' ' + s;
-    } else if (target === 'text') {
-      current.text += ' ' + s;
-    } else if (!current.options.length) {
+    } else if (target === 'instruction') {
       current.instruction = ((current.instruction || '') + ' ' + s).trim();
+    } else if (!current.options.length) {
+      // კითხვის ტექსტი ხშირად რამდენიმე სტრიქონზეა — ციტატა ცალკე ხაზზე ჩამოდის.
+      // ცარიელი ხაზიც კი არ ნიშნავს, რომ კითხვა დამთავრდა: სანამ პასუხები არ დაიწყო,
+      // ყველაფერი კითხვის ტექსტია.
+      current.text += ' ' + s;
     }
   }
   flush();
@@ -627,12 +630,43 @@ drop.addEventListener('drop', e => {
 });
 fileInput.addEventListener('change', () => handle([...fileInput.files]));
 
+// საიტზე უკვე შენახული ტესტის წამოღება — გასაღების და სათაურის შესანარჩუნებლად
+async function fetchExisting(id) {
+  if (!existingIndex || !existingIndex.some(e => e.id === id)) return null;
+  try {
+    const res = await fetch('test-' + id + '.json', { cache: 'no-store' });
+    return res.ok ? await res.json() : null;
+  } catch (e) {
+    return null;
+  }
+}
+
+function carryOver(test, old) {
+  if (!old) return;
+  const byNumber = new Map((old.questions || []).map(q => [q.number, q]));
+  let kept = 0;
+  test.questions.forEach(q => {
+    const prev = byNumber.get(q.number);
+    if (prev && prev.correctAnswer) { q.correctAnswer = prev.correctAnswer; kept++; }
+  });
+  if (old.author) test.author = old.author;
+  if (old.work) test.work = old.work;
+  if (old.title) test.title = old.title;
+  if (old.order != null) test.order = old.order;
+  if (kept) {
+    test.warnings = (test.warnings || [])
+      .filter(w => !/სწორი პასუხ/.test(w))
+      .concat('არსებული გასაღები შენარჩუნდა (' + kept + ' პასუხი) და სათაურიც');
+  }
+}
+
 async function handle(files) {
   if (!files.length) return;
   for (let i = 0; i < files.length; i++) {
     $('progress').textContent = `მუშავდება ${i + 1} / ${files.length} — ${files[i].name}`;
     try {
       const test = await window.ExamParser.parsePdfFile(files[i], pdfjsLib);
+      carryOver(test, await fetchExisting(test.id));
 
       // იმავე PDF-ის ხელახლა ჩაგდება ანახლებს ჩანაწერს;
       // სხვა PDF იმავე სათაურით ცალკე ფაილად ინახება (ამაყი, amaqi-2 ...)
@@ -641,10 +675,8 @@ async function handle(files) {
         test.id = tests[same].id;
         tests[same] = test;
       } else {
-        const taken = new Set([
-          ...tests.map(t => t.id),
-          ...((existingIndex || []).map(e => e.id)),
-        ]);
+        // საიტზე არსებული იმავე id-ის ტესტი განახლდება, არ დუბლირდება
+        const taken = new Set(tests.map(t => t.id));
         if (taken.has(test.id)) {
           let n = 2;
           while (taken.has(test.id + '-' + n)) n++;

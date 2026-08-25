@@ -30,63 +30,95 @@ function doPost(e) {
 
     var correct = 0;
     var keyKnown = 0;
-    var lines = [];
+    var rows = [];
 
     numbers.forEach(function (n) {
       var given = answers[n] || '—';
       var right = key[n] || '';
-      var mark = '';
+      var state = 'unknown';
       if (right) {
         keyKnown++;
-        if (given === right) { correct++; mark = '✓'; }
-        else { mark = '✗  (სწორი: ' + right + ')'; }
+        state = (given === right) ? 'ok' : 'bad';
+        if (state === 'ok') correct++;
       }
-      lines.push('  ' + n + '. ' + given + '  ' + mark);
+      rows.push({ n: n, given: given, right: right, state: state });
     });
 
     var score = (data.comprehensionTotal != null) ? data.comprehensionTotal : correct;
     var maxScore = data.comprehensionMaxPoints || numbers.length;
 
-    var body = [];
-    body.push('მოსწავლე: ' + name);
-    body.push('ტექსტი: ' + (data.testTitle || data.testId || '—'));
-    body.push('გაგზავნის დრო: ' + formatDate(data.submittedAt));
-    body.push('');
-    body.push('──────────────────────────────');
-    body.push('1. ტექსტის გააზრება');
-    body.push('──────────────────────────────');
-
+    var scoreText;
     if (keyKnown === numbers.length && numbers.length > 0) {
-      body.push('ქულა: ' + score + ' / ' + maxScore);
+      scoreText = score + ' / ' + maxScore;
     } else if (keyKnown > 0) {
-      body.push('ქულა: ' + correct + ' / ' + keyKnown + '  (ნაწილობრივი — გასაღები არასრულია)');
+      scoreText = correct + ' / ' + keyKnown + ' (ნაწილობრივი — გასაღები არასრულია)';
     } else {
-      body.push('ქულა ვერ დაითვალა — სწორი პასუხები შევსებული არ არის');
+      scoreText = 'ვერ დაითვალა — სწორი პასუხები შევსებული არ არის';
     }
-    body.push('');
-    body.push(lines.length ? lines.join('\n') : '  (პასუხები არ არის მონიშნული)');
 
-    body.push('');
-    body.push('──────────────────────────────');
-    body.push('2. თხზულება — ' + (data.essayWordCount || 0) + ' სიტყვა');
-    body.push('──────────────────────────────');
-    body.push('');
-    body.push(data.essayText || '(თხზულება არ დაწერილა)');
+    var duration = formatDuration(data.durationSeconds);
+
+    // --- უბრალო ტექსტი (სათადარიგოდ) ---
+    var plain = [];
+    plain.push('მოსწავლე: ' + name);
+    plain.push('ტექსტი: ' + (data.testTitle || data.testId || '—'));
+    plain.push('გაგზავნის დრო: ' + formatDate(data.submittedAt));
+    plain.push('ხანგრძლივობა: ' + duration);
+    plain.push('');
+    plain.push('1. ტექსტის გააზრება — ' + scoreText);
+    rows.forEach(function (r) {
+      plain.push('  ' + r.n + '. ' + r.given +
+        (r.state === 'ok' ? '  ✓' : r.state === 'bad' ? '  ✗ (სწორი: ' + r.right + ')' : ''));
+    });
+    plain.push('');
+    plain.push('2. თხზულება — ' + (data.essayWordCount || 0) + ' სიტყვა');
+    plain.push('');
+    plain.push(data.essayText || '(თხზულება არ დაწერილა)');
+
+    // --- HTML: ✓ მწვანე, ✗ წითელი ---
+    var html = [];
+    html.push('<div style="font-family:Arial,\'Noto Sans Georgian\',sans-serif;font-size:14px;color:#0f172a;max-width:640px">');
+    html.push('<p style="margin:0 0 4px"><b>მოსწავლე:</b> ' + esc(name) + '</p>');
+    html.push('<p style="margin:0 0 4px"><b>ტექსტი:</b> ' + esc(data.testTitle || data.testId || '—') + '</p>');
+    html.push('<p style="margin:0 0 4px"><b>გაგზავნის დრო:</b> ' + esc(formatDate(data.submittedAt)) + '</p>');
+    html.push('<p style="margin:0 0 16px"><b>ხანგრძლივობა:</b> ' + esc(duration) + '</p>');
+
+    html.push('<h3 style="margin:0 0 8px;font-size:15px;border-top:1px solid #e2e8f0;padding-top:12px">' +
+              '1. ტექსტის გააზრება — ' + esc(scoreText) + '</h3>');
+    html.push('<table style="border-collapse:collapse;font-size:14px">');
+    rows.forEach(function (r) {
+      var color = r.state === 'ok' ? '#16a34a' : r.state === 'bad' ? '#dc2626' : '#64748b';
+      var mark = r.state === 'ok' ? '✓' : r.state === 'bad' ? '✗' : '–';
+      var extra = r.state === 'bad' ? ' <span style="color:#64748b">(სწორი: ' + esc(r.right) + ')</span>' : '';
+      html.push('<tr>' +
+        '<td style="padding:3px 10px 3px 0;color:#64748b">' + esc(r.n) + '.</td>' +
+        '<td style="padding:3px 10px 3px 0;font-weight:bold">' + esc(r.given) + '</td>' +
+        '<td style="padding:3px 10px 3px 0;color:' + color + ';font-weight:bold;font-size:16px">' + mark + '</td>' +
+        '<td style="padding:3px 0">' + extra + '</td></tr>');
+    });
+    html.push('</table>');
+
+    html.push('<h3 style="margin:20px 0 8px;font-size:15px;border-top:1px solid #e2e8f0;padding-top:12px">' +
+              '2. თხზულება — ' + (data.essayWordCount || 0) + ' სიტყვა</h3>');
+    html.push('<div style="white-space:pre-wrap;line-height:1.7;background:#f8fafc;border:1px solid #e2e8f0;' +
+              'border-radius:8px;padding:14px">' + esc(data.essayText || '(თხზულება არ დაწერილა)') + '</div>');
+    html.push('</div>');
 
     MailApp.sendEmail({
       to: RECIPIENT,
       subject: 'ნაშრომი: ' + name + ' — ' + (data.testTitle || data.testId || ''),
-      body: body.join('\n')
+      body: plain.join('\n'),
+      htmlBody: html.join('')
     });
 
     if (SHEET_ID) {
       var sheet = SpreadsheetApp.openById(SHEET_ID).getSheets()[0];
       if (sheet.getLastRow() === 0) {
-        sheet.appendRow(['თარიღი', 'მოსწავლე', 'ტექსტი', 'ქულა', 'მაქსიმუმი', 'სიტყვა', 'თხზულება']);
+        sheet.appendRow(['თარიღი', 'მოსწავლე', 'ტექსტი', 'ქულა', 'მაქსიმუმი', 'ხანგრძლივობა', 'სიტყვა', 'თხზულება']);
       }
       sheet.appendRow([
         new Date(), name, data.testTitle || data.testId,
-        score, maxScore, data.essayWordCount || 0, data.essayText || ''
+        score, maxScore, duration, data.essayWordCount || 0, data.essayText || ''
       ]);
     }
 
@@ -110,6 +142,22 @@ function formatDate(iso) {
   }
 }
 
+function formatDuration(seconds) {
+  var s = Number(seconds);
+  if (!s || s < 0) return 'უცნობია';
+  var h = Math.floor(s / 3600);
+  var m = Math.floor((s % 3600) / 60);
+  var sec = s % 60;
+  if (h) return h + ' სთ ' + m + ' წთ';
+  if (m) return m + ' წთ ' + sec + ' წმ';
+  return sec + ' წმ';
+}
+
+function esc(v) {
+  return String(v == null ? '' : v)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
 function json(obj) {
   return ContentService.createTextOutput(JSON.stringify(obj))
     .setMimeType(ContentService.MimeType.JSON);
@@ -130,6 +178,7 @@ function testEmail() {
         correctAnswers: { 2: 'გ', 3: 'ა', 4: 'დ' },
         comprehensionTotal: 2,
         comprehensionMaxPoints: 10,
+        durationSeconds: 1875,
         essayText: 'ეს სატესტო თხზულებაა.',
         essayWordCount: 3
       })
