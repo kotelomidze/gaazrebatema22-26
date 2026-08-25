@@ -12,30 +12,6 @@
       "hasEssay": true,
       "keyComplete": true
     },
-      {
-       "id": "vepkhistqaosnidaniiiiiii",
-       "file": "test-vepkhistqaosnidaniiiiiii.json",
-       "title": "ტექსტი I",
-       "author": "რუსთაველი",
-       "work": "ვეფხისტყაოსანი (ამოა რომე...)",
-       "order": 999,
-       "source": "მონაკვეთი შოთა რუსთაველის „ვეფხისტყაოსნიდან“ (ტარიელისა და ავთანდილის მეორე შეხვედრა)",
-       "questionCount": 10,
-       "hasEssay": true,
-       "keyComplete": true
-     },
-     {
-       "id": "grigol-khandztelis-tskhovreba",
-       "file": "test-grigol-khandztelis-tskhovreba.json",
-       "title": "ტექსტი II",
-       "author": "გიორგი მერჩულე",
-       "work": "გრიგოლ ხანძთელის ცხოვრება (ცქირის ეპიზოდი)",
-       "order": 999,
-       "source": "მონაკვეთი გიორგი მერჩულის თხზულებიდან „გრიგოლ ხანძთელის ცხოვრება“",
-       "questionCount": 10,
-       "hasEssay": true,
-       "keyComplete": true
-      },
     {
       "id": "ade-chamovida-psikologiuri-etiudi",
       "file": "test-ade-chamovida-psikologiuri-etiudi.json",
@@ -236,6 +212,18 @@
       "work": "გმირთა ვარამი",
       "order": 999,
       "source": "მონაკვეთი ლევან გოთუას რომანიდან „გმირთა ვარამი“, რომელშიც დაკარგული ოჯახის წევრების მოსაძებნად წასული ქალების ამბავია მოთხრობილი",
+      "questionCount": 10,
+      "hasEssay": true,
+      "keyComplete": true
+    },
+    {
+      "id": "grigol-khandztelis-tskhovreba",
+      "file": "test-grigol-khandztelis-tskhovreba.json",
+      "title": "ტექსტი II",
+      "author": "გრიგოლ",
+      "work": "გრიგოლ ხანძთელის ცხოვრება",
+      "order": 999,
+      "source": "მონაკვეთი გიორგი მერჩულის თხზულებიდან „გრიგოლ ხანძთელის ცხოვრება“",
       "questionCount": 10,
       "hasEssay": true,
       "keyComplete": true
@@ -656,6 +644,18 @@
       "work": "ვეფხისტყაოსნი (მოედანს დავდგი...)",
       "order": 999,
       "source": "მონაკვეთი „ვეფხისტყაოსნიდან“",
+      "questionCount": 10,
+      "hasEssay": true,
+      "keyComplete": true
+    },
+    {
+      "id": "vepkhistqaosniiiiiii",
+      "file": "test-vepkhistqaosniiiiiii.json",
+      "title": "ტექსტი I",
+      "author": "რუსთაველი",
+      "work": "ვეფხისტყაოსანი (ამოა რომე...)",
+      "order": 999,
+      "source": "შოთა რუსთაველის „ვეფხისტყაოსნიდან“ მონაკვეთი, რომელშიც ტარიელისა და ავთანდილის მეორე შეხვედრა არის აღწერილი",
       "questionCount": 10,
       "hasEssay": true,
       "keyComplete": true
